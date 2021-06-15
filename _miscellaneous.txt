@@ -84,7 +84,10 @@ php artisan db:seed --class=TasksTableSeeder
 
 > php artisan tinker
 App\Models\User::all();
+$n = App\Models\User::all()->count();
 $f = App\Models\User::find(1);
+$f->name = 'Apollo';
+$f->save();
 
 = = artisan make:controller = =
 
