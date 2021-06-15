@@ -88,3 +88,28 @@ DB_DATABASE=my-app
 DB_USERNAME=xxxxxx
 DB_PASSWORD=xxxxxx
 ```
+
+======================================================
+
+= timetravel =
+
+php artisan make:migration create_users_table
+php artisan migrate
+php artisan make:seeder UsersTableSeeder
+php artisan migrate:refresh && php artisan db:seed
+
+= timetravel =
+
+> php artisan tinker
+App\Models\User::all();
+$f = App\Models\User::find(1);
+
+= timetravel =
+
+php artisan make:controller UserController -m 'Models\User'
+php artisan make:controller SessionController -r
+这里会先写一份，然后再写一份。
+
+======================================================
+
+
