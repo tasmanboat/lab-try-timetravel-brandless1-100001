@@ -1,0 +1,59 @@
+
+= timetravel =
+
+cd appMom
+composer create-project --prefer-dist laravel/laravel my-app "6.*"
+cd my-app
+composer install
+
+cd appMom
+composer create-project --prefer-dist laravel/laravel my-app "6.*"
+cp -r my-app/. dest/
+cd dest
+composer install
+
+= timetravel =
+
+.gitignore
+
+add
+```
+/public/css
+/public/js
+```
+
+= timetravel =
+
+User.php
+update to
+```
+// namespace App;
+namespace App\Models;
+```
+
+mv app/User.php app/Models/User.php
+(replace text where needed)
+
+touch public/assets/images/.keep
+mv database/migrations database/migrations_default
+touch database/migrations_default/.keep
+touch database/migrations/.keep
+
+
+= timetravel =
+
+.editorconfig
+update to
+```
+# indent_size = 4
+indent_size = 2
+```
+
+config/app.php
+update to
+```
+// 'timezone' => 'UTC',
+'timezone' => 'Asia/Shanghai',
+```
+
+

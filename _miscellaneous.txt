@@ -34,15 +34,38 @@ composer install
 
 sudo service mysql restart
 
-= = artisan = =
+= = artisan serve = =
+
+php artisan serve --port=8000
+
+= = artisan ui = =
+
+composer require laravel/ui="1.*" --dev
+php artisan ui bootstrap
+<button type="button" class="btn btn-primary">button</button>
+
+= = artisan make:migration = =
+
+php artisan make:migration create_users_table
+(no need) php artisan make:migration add_is_admin_to_users_table
+
+= = artisan make:seeder = =
+
+php artisan make:seeder UsersTableSeeder
+
+= = artisan make:controller = =
+
+php artisan make:controller UserController -m 'Models\User'
+php artisan make:controller SessionController -r
 
 = = seeder = =
 
-
+php artisan migrate:refresh && php artisan db:seed
 
 = = test 1 = =
 
-check
+check resources/js/app.js
+check migration
 
 = = test 2 = =
 
@@ -50,8 +73,13 @@ check
 
 数据表设计稿
 
+user
+- id
+
 = = draft 2 = =
 
 通行表设计稿
+
+(none)
 
 
