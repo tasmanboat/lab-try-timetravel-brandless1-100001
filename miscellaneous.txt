@@ -7,3 +7,51 @@ git remote -v
 
 git push -u origin main
 
+git pull
+
+git push
+
+= = git settings = =
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email your@example.com
+$ git config --global push.default simple
+$ git config --global credential.helper 'cache --timeout=360000'
+$ cat ~/.gitconfig
+
+= = git = =
+
+git branch
+
+= = composer = =
+
+cd appMom
+composer create-project --prefer-dist laravel/laravel my-app "6.*"
+cd my-app
+composer install
+
+= = mysql = =
+
+sudo service mysql restart
+
+= = artisan = =
+
+= = seeder = =
+
+
+
+= = test 1 = =
+
+check
+
+= = test 2 = =
+
+= = draft 1 = =
+
+数据表设计稿
+
+= = draft 2 = =
+
+通行表设计稿
+
+
