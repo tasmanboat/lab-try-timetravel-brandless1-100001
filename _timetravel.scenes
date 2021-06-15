@@ -20,6 +20,7 @@ add
 ```
 /public/css
 /public/js
+/public/assets
 ```
 
 = timetravel =
@@ -102,7 +103,10 @@ php artisan migrate:refresh && php artisan db:seed
 
 > php artisan tinker
 App\Models\User::all();
+$n = App\Models\User::all()->count();
 $f = App\Models\User::find(1);
+$f->name = 'Apollo';
+$f->save();
 
 = timetravel =
 
