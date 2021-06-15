@@ -66,6 +66,7 @@ php artisan make:migration create_users_table
 = = artisan make:seeder = =
 
 php artisan make:seeder UsersTableSeeder
+php artisan make:seeder TasksTableSeeder
 
 = = artisan make:controller = =
 
@@ -75,6 +76,7 @@ php artisan make:controller SessionController -r
 = = seeder = =
 
 php artisan migrate:refresh && php artisan db:seed
+php artisan db:seed --class=TasksTableSeeder
 
 = = test 1 = =
 
