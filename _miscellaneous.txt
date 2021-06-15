@@ -42,7 +42,11 @@ php artisan serve --port=8000
 
 composer require laravel/ui="1.*" --dev
 php artisan ui bootstrap
-<button type="button" class="btn btn-primary">button</button>
+SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn
+yarn install
+yarn run prod
+yarn install
+yarn run prod
 
 = = artisan make:migration = =
 

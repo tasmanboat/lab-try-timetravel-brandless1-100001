@@ -56,4 +56,18 @@ update to
 'timezone' => 'Asia/Shanghai',
 ```
 
+= timetravel =
+
+welcome.blade.php
+update to
+```
+<head>
+<title>Laravel</title>
+<script defer src="{{ mix('/js/app.js') }}"></script>
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+</head>
+<body>
+<button type="button" class="btn btn-primary">button</button>
+</body>
+```
 
