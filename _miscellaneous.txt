@@ -34,9 +34,17 @@ composer install
 
 sudo service mysql restart
 
+新建 app 数据库
+sudo service mysql restart
+登入 mysql -u xxxxxx -p  登出 quit
+show databases;
+CREATE DATABASE `my-app` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+quit;
+
 = = artisan serve = =
 
 php artisan serve --port=8000
+yarn run watch
 
 = = artisan ui = =
 
@@ -47,6 +55,8 @@ yarn install
 yarn run prod
 yarn install
 yarn run prod
+rm package-lock.json
+yarn add cross-env
 
 = = artisan make:migration = =
 
