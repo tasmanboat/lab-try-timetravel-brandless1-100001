@@ -1,0 +1,8 @@
+
+= = github = =
+
+ssh -T git@github.com
+
+git remote -v
+
+
