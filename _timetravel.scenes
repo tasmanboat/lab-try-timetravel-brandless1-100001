@@ -20,7 +20,7 @@ add
 ```
 /public/css
 /public/js
-/public/assets
+!/public/assets/
 ```
 
 = timetravel =
@@ -44,9 +44,9 @@ touch database/migrations/.keep
 = timetravel =
 
 .editorconfig
-update to
+add
 ```
-# indent_size = 4
+[*.blade.php]
 indent_size = 2
 ```
 

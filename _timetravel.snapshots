@@ -1,0 +1,29 @@
+
+timetravelid1_quality000000_filterbytime1
+目录创建方面 Models 目录 gitignore
+
+timetravelid2_quality000001_filterbytime2
+包依赖 bootstrap 时区 数据库连接器
+
+timetravelid3_quality100000_filterbytime3
+seeder store update destroy
+
+timetravelid4_quality010010_filterbytime3
+resources user.show user.edit user.create (route users.create as signup), tmpl header footer, index paginate
+
+timetravelid5_quality010010_filterbytime3
+resources header nav, resources session.create (route sessions.create as login GET, route sessions.store as login POST); header logout btn (route sessions.destroy as logout POST)
+
+timetravelid6_quality001010_filterbytime4
+resources header nav with auth check; inbound request filter guest_only (某些 route: users.create, sessions.create)
+
+timetravelid7_quality001000_filterbytime4
+inbound request filter authed_only (某些 route 可公看: users.create, users.store, users.show, users.index, 其它自然只能登入之后才能让做: users.edit, users.update, ...)
+
+timetravelid8_quality000100_filterbytime5
+model manipulation permission policy owner_only
+
+timetravelid8_quality000110_filterbytime5
+resources user.index, model manipulation permission policy admin_only
+
+

@@ -89,6 +89,16 @@ $f = App\Models\User::find(1);
 $f->name = 'Apollo';
 $f->save();
 
+App\Models\User::all()
+App\Models\User::orderBy('id', 'asc')->get()
+
+App\Models\User::withTrashed()->get()
+App\Models\User::withTrashed()->orderBy('id', 'asc')->get()
+
+$f = App\Models\User::withTrashed()->find(53)
+$f->deleted_at = null;
+$f->save();
+
 = = artisan make:controller = =
 
 php artisan make:controller UserController -m 'Models\User'
