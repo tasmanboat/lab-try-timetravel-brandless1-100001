@@ -18,7 +18,7 @@ timetravelid6_quality001010_filterbytime4
 resources header nav with auth check; inbound request filter guest_only (某些 route: users.create, sessions.create)
 
 timetravelid7_quality001000_filterbytime4
-inbound request filter authed_only (某些 route 可公看: users.create, users.store, users.show, users.index, 其它自然只能登入之后才能让做: users.edit, users.update, ...)
+inbound request filter authed_only (某些 route 可公看 (authed_only except): users.create, users.store, users.show, users.index, 其它自然只能登入之后才能让做 (authed_only): users.edit, users.update, ...)
 
 timetravelid8_quality000100_filterbytime5
 model manipulation permission policy owner_only

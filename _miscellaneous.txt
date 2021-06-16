@@ -99,8 +99,13 @@ $f = App\Models\User::withTrashed()->find(53)
 $f->deleted_at = null;
 $f->save();
 
+= = artisan route = =
+
+php artisan route:list
+
 = = artisan make:controller = =
 
+php artisan make:controller DefaultController
 php artisan make:controller UserController -m 'Models\User'
 php artisan make:controller SessionController -r
 
@@ -115,12 +120,15 @@ check migration
 
 = = test 2 = =
 
+check button nav header partial
+
 = = draft 1 = =
 
 数据表设计稿
 
 user
 - id
+- is_admin
 
 = = draft 2 = =
 
