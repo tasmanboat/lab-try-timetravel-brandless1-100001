@@ -104,6 +104,10 @@ $f->save();
 php artisan make:controller UserController -m 'Models\User'
 php artisan make:controller SessionController -r
 
+= = artisan make:policy = =
+
+php artisan make:policy UserPolicy
+
 = = test 1 = =
 
 check resources/js/app.js
