@@ -26,4 +26,14 @@ model manipulation permission policy owner_only
 timetravelid8_quality000110_filterbytime5
 resources user.index, model manipulation permission policy admin_only
 
+- - -
+
+extra moves
+
+timetravelid9_quality010000_filterbytime+
+route settings
+
+timetravelid9_quality000010_filterbytime+
+resources user.index delete confirm
+
 

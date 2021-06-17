@@ -23,6 +23,13 @@ $ cat ~/.gitconfig
 
 git branch
 
+= = miscellaneous = =
+
+先定 timetravel 大致样子, 确认这是一个支持 timetravel 玩法的游戏
+试试 moves 和 cheatsheet
+按照 scenes 补完出来 quality / aspects of quality
+按照 chord 总结出来 steps / snapshots
+
 = = composer = =
 
 cd appMom
