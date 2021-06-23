@@ -162,7 +162,7 @@ RedirectIfAuthenticated.php
 = timetravel =
 
 authed_only
-SessionController.php (之前一个需要登入的网页，在登入后自动跳转到之前的网页)
+SessionController.php (intended($fallback): 之前一个需要登入的网页，在登入后自动跳转到之前的网页)
 UserController.php
 
 ======================================================
@@ -181,6 +181,7 @@ UserController.php
 admin_only
 UserPolicy.php
 UserController.php
+resources/views/user/_user.blade.php
 
 ======================================================
 
