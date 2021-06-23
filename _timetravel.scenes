@@ -167,6 +167,20 @@ UserController.php
 
 ======================================================
 
+= timetravel =
 
+owner_only
+AuthServiceProvider.php
+UserPolicy.php
+UserController.php
 
+======================================================
+
+= timetravel =
+
+admin_only
+UserPolicy.php
+UserController.php
+
+======================================================
 
