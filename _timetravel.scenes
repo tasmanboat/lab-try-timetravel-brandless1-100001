@@ -153,3 +153,20 @@ views/user/_header.blade.php
 
 = timetravel =
 
+guest_only
+SessionController.php
+UserController.php
+RedirectIfAuthenticated.php
+
+
+= timetravel =
+
+authed_only
+SessionController.php
+UserController.php
+
+======================================================
+
+
+
+
