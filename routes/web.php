@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Route::get('about', 'DefaultController@about')->name('about');
 
+Route::get('signup', 'UserController@create')->name('signup');
 Route::resource('users', 'UserController');
+
+Route::get('login', 'SessionController@create')->name('login');
+Route::post('login', 'SessionController@store')->name('login');
+Route::delete('logout', 'SessionController@destroy')->name('logout');
