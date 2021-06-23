@@ -51,6 +51,7 @@ quit;
 = = artisan serve = =
 
 php artisan serve --port=8000
+yarn run dev
 yarn run watch
 
 = = artisan ui = =
@@ -112,7 +113,10 @@ php artisan route:list
 
 = = artisan make:controller = =
 
+# includes no action
 php artisan make:controller DefaultController
+
+# includes index, create, store, show, edit, update, destroy action
 php artisan make:controller UserController -m 'Models\User'
 php artisan make:controller SessionController -r
 

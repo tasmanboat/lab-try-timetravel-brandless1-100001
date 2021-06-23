@@ -23,17 +23,17 @@ inbound request filter authed_only (某些 route 可公看 (authed_only except):
 timetravelid8_quality000100_filterbytime5
 model manipulation permission policy owner_only
 
-timetravelid8_quality000110_filterbytime5
+timetravelid9_quality000110_filterbytime5
 resources user.index, model manipulation permission policy admin_only
 
 - - -
 
 extra moves
 
-timetravelid9_quality010000_filterbytime+
+timetravelid10_quality010000_filterbytime+
 route settings
 
-timetravelid9_quality000010_filterbytime+
+timetravelid11_quality000010_filterbytime+
 resources user.index delete confirm
 
 
