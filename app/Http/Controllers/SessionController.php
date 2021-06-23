@@ -36,7 +36,8 @@ class SessionController extends Controller
         ]);
         if (Auth::attempt($credentials, $request->has('remember'))){
             session()->flash('success', 'Welcome back!');
-            return redirect()->route('users.show', [Auth::user()]);
+            $fallback = route('users.show', [Auth::user()]);
+            return redirect()->intended($fallback);
         } else {
             session()->flash('danger', "Sorry, the email and the password don't seem to match.");
             return redirect()->back()->withInput();
