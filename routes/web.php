@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', 'UserController');
+Route::get('about', 'DefaultController@about')->name('about');
 
+Route::resource('users', 'UserController');

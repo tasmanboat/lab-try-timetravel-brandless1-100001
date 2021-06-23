@@ -111,6 +111,13 @@ $f->save();
 
 php artisan route:list
 
+route tag view
+<a href="{{ route('users.index') }}"></a>
+<a href="{{ route('users.show', $user->id) }}"></a>
+Route::resource('users', 'UserController');
+<a href="{{ route('about') }}"></a>
+Route::get('about', 'DefaultController@about')->name('about');
+
 = = artisan make:controller = =
 
 # includes no action

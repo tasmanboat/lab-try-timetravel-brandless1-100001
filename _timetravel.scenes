@@ -116,4 +116,27 @@ php artisan make:controller SessionController -r
 
 ======================================================
 
+= timetravel =
+
+views/user/show.blade.php
+views/user/tmpl.blade.php
+views/user/_messages.blade.php, _footer.blade.php, _header.blade.php
+
+views/user/_header.blade.php
+这里会先写一份，然后再写一份。
+
+views/user/edit.blade.php
+views/user/_errors.blade.php
+
+views/user/index.blade.php
+views/user/_user.blade.php
+这里会先写一份，然后再写一份。
+
+views/user/create.blade.php
+
+UserController.php
+这里会先写一份，然后再写一份。
+
+======================================================
+
 
