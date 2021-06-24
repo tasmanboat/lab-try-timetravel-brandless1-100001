@@ -31,6 +31,11 @@ git push origin v0.1
 git checkout v0.1
 git checkout main
 
+漫步 commit 并在编辑器里高亮文件名
+git checkout v0.3
+git reset HEAD~1  (文件会被取消暂存, 文件本身退回到工作区)
+git checkout main
+
 删除 tag 在 remote repo 和 local repo
 git checkout main  (git checkout master)
 git push origin :refs/tags/v0.9

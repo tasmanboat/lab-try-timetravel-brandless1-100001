@@ -46,7 +46,8 @@ touch database/migrations/.keep
 .editorconfig
 add
 ```
-[*.blade.php]
+[*.{js,html,blade.php,css,scss}]
+indent_style = space
 indent_size = 2
 ```
 
