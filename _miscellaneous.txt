@@ -27,6 +27,15 @@ git tag
 git tag v0.1
 git push origin v0.1
 
+切换到此 tag 的全量文件版本
+git checkout v0.1
+git checkout main
+
+删除 tag 在 remote repo 和 local repo
+git checkout main  (git checkout master)
+git push origin :refs/tags/v0.9
+git tag -d v0.9
+
 = = miscellaneous = =
 
 先定 timetravel 大致样子, 确认这是一个支持 timetravel 玩法的游戏
