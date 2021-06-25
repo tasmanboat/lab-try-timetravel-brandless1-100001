@@ -79,6 +79,10 @@ sudo service mysql restart
 登入 mysql -u xxxxxx -p  登出 quit
 show databases;
 
+if .env not exist, as after git clone:
+cp .env.example .env && php artisan key:generate
+if .env exists
+
 .env
 update to
 ```
