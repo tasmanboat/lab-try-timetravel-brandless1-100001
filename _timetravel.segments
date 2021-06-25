@@ -5,3 +5,7 @@ route settings
 timetravelid_extramove_quality000010_filterbytime+
 resources user.index delete confirm
 
+(开启 全站在线人数统计显示)
+timetravelid_extramove_quality100010_filterbytime+
+SessionController resources user.index 
+
