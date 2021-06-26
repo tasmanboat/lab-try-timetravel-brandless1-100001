@@ -78,11 +78,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ```
 sudo service mysql restart && create a db
 git clone https://github.com/tasmanboat/lab-try-timetravel-brandless1-100001.git
+cd dir && composer install
 cp .env.example .env && php artisan key:generate && nano .env to fill in db connection info
-composer install
 yarn install && yarn run prod
 php artisan migrate:refresh && php artisan db:seed
+git tag && git checkout TAG_NAME
 php artisan serve --port=8000 && yarn run watch
+git checkout main -f
 ```
 
 ## License
