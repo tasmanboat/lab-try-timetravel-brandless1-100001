@@ -73,6 +73,16 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+## runup
+
+sudo service mysql restart && create a db
+git clone https://github.com/tasmanboat/lab-try-timetravel-brandless1-100001.git
+cp .env.example .env && php artisan key:generate && nano .env to fill in db connection info
+composer install
+yarn install && yarn run prod
+php artisan migrate:refresh && php artisan db:seed
+php artisan serve --port=8000 && yarn run watch
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
