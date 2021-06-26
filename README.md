@@ -75,6 +75,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## runup
 
+```
 sudo service mysql restart && create a db
 git clone https://github.com/tasmanboat/lab-try-timetravel-brandless1-100001.git
 cp .env.example .env && php artisan key:generate && nano .env to fill in db connection info
@@ -82,6 +83,7 @@ composer install
 yarn install && yarn run prod
 php artisan migrate:refresh && php artisan db:seed
 php artisan serve --port=8000 && yarn run watch
+```
 
 ## License
 
