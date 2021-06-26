@@ -69,6 +69,7 @@ sudo service mysql restart
 sudo service mysql restart
 登入 mysql -u xxxxxx -p  登出 quit
 show databases;
+DROP DATABASE `my-app`;
 CREATE DATABASE `my-app` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 quit;
 
