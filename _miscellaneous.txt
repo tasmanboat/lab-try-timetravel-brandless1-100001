@@ -32,8 +32,13 @@ git checkout v0.1
 git checkout main
 
 漫步 commit 并在编辑器里高亮文件名
+git checkout v0.3 (非正式分支 detached HEAD state)
+git reset COMMIT_ID (reset branch ref to COMMIT_ID, --mixed to reset the index file but not the working tree)
+git checkout main -f && git status && git clean -nd && git clean -fd
+
+漫步 commit 并在编辑器里高亮文件名
 git checkout v0.3
-git reset HEAD~1  (文件会被取消暂存, 文件本身退回到工作区) 等价于 git reset --soft HEAD~1  &&  git reset HEAD * 
+git reset HEAD~1  (工作区会有一堆文件(红)) 等价于 git reset --soft HEAD~1  &&  git reset
 git checkout main --force
 
 删除 tag 在 remote repo 和 local repo
