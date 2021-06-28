@@ -51,6 +51,7 @@ git tag -d v0.9
 du -hs *
 du -hs DIR_NAME
 du -h --max-depth=1
+du -hs vendor && du -hs node_modules
 
 = = miscellaneous = =
 
