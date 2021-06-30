@@ -1,4 +1,6 @@
 
+_timetravel.snapshots
+
 timetravelid_extramove_quality010000_filterbytime+
 route settings
 
@@ -8,4 +10,21 @@ resources user.index delete confirm
 (开启 全站在线人数统计显示)
 timetravelid_extramove_quality100010_filterbytime+
 SessionController resources user.index 
+
+
+
+
+_timetravel.scenes
+
+runup
+
+sudo service mysql restart && create a db
+git clone https://github.com/tasmanboat/lab-try-timetravel-brandless1-100001.git
+cd dir && composer install #(composer 依赖包)
+cp .env.example .env && php artisan key:generate && nano .env to fill in db connection info #(填入数据库信息)
+yarn install && yarn run prod #(npm 依赖包)
+php artisan migrate:refresh && php artisan db:seed
+git tag && git checkout TAG_NAME #(用 detached HEAD state 保护 main branch)
+php artisan serve --port=8000 && yarn run watch
+git checkout main -f
 
