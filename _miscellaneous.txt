@@ -60,6 +60,7 @@ du -hs vendor && du -hs node_modules
 
 统计(含子目录)
 find DIR_NAME -type f | wc -l
+cd DIR_NAME && find . -type f | wc -l
 
 = = miscellaneous = =
 
