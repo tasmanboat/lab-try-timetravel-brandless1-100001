@@ -28,3 +28,9 @@ git tag && git checkout TAG_NAME #(用 detached HEAD state 保护 main branch)
 php artisan serve --port=8000 && yarn run watch
 git checkout main -f
 
+git tag && git checkout TAG_NAME
+yarn run prod
+php artisan serve --port=8000 && yarn run watch
+git checkout main -f && git status && git clean -nd && git clean -fd
+
+
