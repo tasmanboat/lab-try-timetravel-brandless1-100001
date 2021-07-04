@@ -103,8 +103,8 @@ yarn install
 yarn run prod
 yarn install
 yarn run prod
-rm package-lock.json
 yarn add cross-env
+rm package-lock.json
 
 = = artisan make:migration = =
 
