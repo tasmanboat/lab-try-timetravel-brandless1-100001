@@ -80,7 +80,7 @@ sudo service mysql restart
 show databases;
 
 if .env not exist, as after git clone:
-cp .env.example .env && php artisan key:generate
+cp .env.example .env && composer install && php artisan key:generate
 if .env exists
 
 .env
@@ -94,6 +94,8 @@ DB_DATABASE=my-app
 DB_USERNAME=xxxxxx
 DB_PASSWORD=xxxxxx
 ```
+
+php artisan serve --port=8000
 
 ======================================================
 
