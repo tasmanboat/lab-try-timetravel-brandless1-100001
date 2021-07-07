@@ -5,6 +5,8 @@ ssh -T git@github.com
 
 git remote -v
 
+git push --dry-run
+
 git push -u origin main
 
 git pull
