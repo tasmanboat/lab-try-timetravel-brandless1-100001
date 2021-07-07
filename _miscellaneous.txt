@@ -50,6 +50,7 @@ git reset HEAD~1  (工作区会有一堆文件(红)) 等价于 git reset --soft 
 删除 tag 在 remote repo 和 local repo
 git checkout main  (git checkout master)
 git push origin :refs/tags/v0.9
+git push origin --delete v0.9
 git tag -d v0.9
 
 = = file = =
