@@ -126,6 +126,7 @@ php artisan migrate:refresh
 php artisan make:seeder UsersTableSeeder
 php artisan make:seeder TasksTableSeeder
 php artisan make:factory TaskFactory --model=Models/Task
+(may need for finding a renamed seeder) composer dump-autoload
 
 = = seeder = =
 
