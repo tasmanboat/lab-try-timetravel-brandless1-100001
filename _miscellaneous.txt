@@ -207,7 +207,7 @@ php artisan make:policy UserPolicy
 
 = = artisan make:model = =
 
-php artisan make:model 'Models\Post' -a
+php artisan make:model Models/Post -a
   app/Http/Controllers/PostController.php
   app/Models/Post.php
   database/factories/PostFactory.php
