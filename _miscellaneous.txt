@@ -148,6 +148,7 @@ $f->deleted_at = null;
 $f->save();
 
 > php artisan tinker
+查找可能已删除的
 App\Models\User::withTrashed()->get();
 $n = App\Models\User::withTrashed()->get()->count();
 $f = App\Models\User::withTrashed()->find(6);
@@ -158,13 +159,26 @@ App\Models\User::withTrashed()->get()
 App\Models\User::withTrashed()->orderBy('id', 'desc')->get()
 
 > php artisan tinker
+查找必然已删除的
+App\Models\User::onlyTrashed()->get();
+$f = App\Models\User::onlyTrashed()->find(12);
+$f->name = 'Lupin';
+$f->save();
+
 App\Models\User::onlyTrashed()->get()
 App\Models\User::onlyTrashed()->orderBy('id', 'asc')->get()
-App\Models\User::onlyTrashed()->where('id', 6)->get()
 
-$f = App\Models\User::withTrashed()->find(6)
+$f = App\Models\User::onlyTrashed()->find(12)
 $f->deleted_at = null;
 $f->save();
+
+> php artisan tinker
+App\Models\User::where('id', 5)->get()
+App\Models\User::withTrashed()->where('id', 6)->get()
+App\Models\User::onlyTrashed()->where('id', 12)->get()
+App\Models\User::find(5)
+App\Models\User::withTrashed()->find(6)
+App\Models\User::onlyTrashed()->find(12)
 
 = = artisan route = =
 
