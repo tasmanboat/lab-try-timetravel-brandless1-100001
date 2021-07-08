@@ -119,6 +119,7 @@ php artisan make:migration create_users_table
 php artisan migrate
 php artisan migrate:reset
 php artisan migrate:refresh
+(may need for reset) php artisan migrate:fresh
 
 = = artisan make:seeder = =
 
