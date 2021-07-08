@@ -205,6 +205,15 @@ php artisan make:controller SessionController -r
 
 php artisan make:policy UserPolicy
 
+= = artisan make:model = =
+
+php artisan make:model 'Models\Post' -a
+  app/Http/Controllers/PostController.php
+  app/Models/Post.php
+  database/factories/PostFactory.php
+  database/migrations/2021_07_08_172830_create_posts_table.php
+  database/seeds/PostSeeder.php
+
 = = test 1 = =
 
 check resources/js/app.js
