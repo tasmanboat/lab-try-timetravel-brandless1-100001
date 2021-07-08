@@ -143,10 +143,26 @@ $f->save();
 App\Models\User::all()
 App\Models\User::orderBy('id', 'asc')->get()
 
-App\Models\User::withTrashed()->get()
-App\Models\User::withTrashed()->orderBy('id', 'asc')->get()
-
 $f = App\Models\User::withTrashed()->find(53)
+$f->deleted_at = null;
+$f->save();
+
+> php artisan tinker
+App\Models\User::withTrashed()->get();
+$n = App\Models\User::withTrashed()->get()->count();
+$f = App\Models\User::withTrashed()->find(6);
+$f->name = 'Frank';
+$f->save();
+
+App\Models\User::withTrashed()->get()
+App\Models\User::withTrashed()->orderBy('id', 'desc')->get()
+
+> php artisan tinker
+App\Models\User::onlyTrashed()->get()
+App\Models\User::onlyTrashed()->orderBy('id', 'asc')->get()
+App\Models\User::onlyTrashed()->where('id', 6)->get()
+
+$f = App\Models\User::withTrashed()->find(6)
 $f->deleted_at = null;
 $f->save();
 
