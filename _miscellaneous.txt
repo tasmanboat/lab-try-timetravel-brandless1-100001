@@ -126,6 +126,7 @@ php artisan migrate:refresh
 php artisan make:seeder UsersTableSeeder
 php artisan make:seeder TasksTableSeeder
 php artisan make:factory TaskFactory --model=Models/Task
+php artisan make:factory TaskFactory -m Models/Task
 (may need for finding a renamed seeder) composer dump-autoload
 
 = = seeder = =
@@ -200,7 +201,7 @@ Route::get('about', 'DefaultController@about')->name('about');
 php artisan make:controller DefaultController
 
 # includes index, create, store, show, edit, update, destroy action
-php artisan make:controller UserController -m 'Models\User'
+php artisan make:controller UserController -m Models/User
 php artisan make:controller SessionController -r
 
 = = artisan make:policy = =
@@ -210,6 +211,7 @@ php artisan make:policy UserPolicy
 = = artisan make:model = =
 
 php artisan make:model Models/Post -a
+# Generate a migration, seeder, factory, and resource controller for the model
   app/Http/Controllers/PostController.php
   app/Models/Post.php
   database/factories/PostFactory.php
