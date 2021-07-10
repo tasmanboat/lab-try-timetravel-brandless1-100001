@@ -186,8 +186,9 @@ App\Models\User::onlyTrashed()->find(12)
 > php artisan tinker
 App\Models\Post::onlyTrashed()->where('user_id', 5)->count();
 $fs = App\Models\Post::onlyTrashed()->where('user_id', 5)->get(); # 一个 collection
-App\Models\Post::withTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->update([ 'title' => 'new title', ]); })
-App\Models\Post::withTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->restore(); })
+App\Models\Post::onlyTrashed()->where('user_id', 5)->get()->count()
+App\Models\Post::onlyTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->update([ 'title' => 'new title 1', ]); })
+App\Models\Post::onlyTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->restore(); })
 
 = = artisan route = =
 
