@@ -173,7 +173,7 @@ App\Models\User::onlyTrashed()->orderBy('id', 'asc')->get()
 
 $f = App\Models\User::onlyTrashed()->find(12)
 $f->deleted_at = null;
-$f->save();
+$f->save(); 必删者的恢复 等价于 App\Models\User::onlyTrashed()->find(12)->restore();
 
 > php artisan tinker
 App\Models\User::where('id', 5)->get()
@@ -182,6 +182,12 @@ App\Models\User::onlyTrashed()->where('id', 12)->get()
 App\Models\User::find(5)
 App\Models\User::withTrashed()->find(6)
 App\Models\User::onlyTrashed()->find(12)
+
+> php artisan tinker
+App\Models\Post::onlyTrashed()->where('user_id', 5)->count();
+$fs = App\Models\Post::onlyTrashed()->where('user_id', 5)->get(); # 一个 collection
+App\Models\Post::withTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->update([ 'title' => 'new title', ]); })
+App\Models\Post::withTrashed()->where('user_id', 5)->get()->each(function ($post){ $post->restore(); })
 
 = = artisan route = =
 
