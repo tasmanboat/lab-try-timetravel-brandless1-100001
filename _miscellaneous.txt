@@ -61,6 +61,7 @@ du -hs DIR_NAME
 du -h --max-depth=1
 du -hs vendor && du -hs node_modules
 du -hs $(ls -A)
+du -hs $(ls -A) | sort -hr
 
 统计(含子目录)
 find DIR_NAME -type f | wc -l
